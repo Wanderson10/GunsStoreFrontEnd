@@ -148,8 +148,15 @@ display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
+margin-top:76px;
+
+
+   
+   
+   
+       
 div{
-   width: 300px;
+   width: 100%;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -169,19 +176,20 @@ button{
     cursor:pointer;
 }
 ul{
-    width:310px;
+    width:100%;
     display:flex;
     flex-direction:column;
     align-items:center;
     background-color:#424242;
     justify-content:center;
-    padding-bottom:20px;
+ 
 
-    margin-right:340px;
+ 
 
     @media (max-width: 620px){
+       
 
-        margin-right:0px;
+       
 
 
 

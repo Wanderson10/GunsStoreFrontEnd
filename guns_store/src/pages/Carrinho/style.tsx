@@ -26,6 +26,10 @@ div{
     display:flex;
     height:50px;
     align-items:center;
+    @media (max-width: 600px) {
+    
+      height: 150px;
+    }
 }
 span{
     color:red;

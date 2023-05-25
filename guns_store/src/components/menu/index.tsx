@@ -62,7 +62,7 @@ function ComponentMenu(){
 
     return(
         <Menu className="Footer">
-            <button onClick={()=>linkToFullProducts()}>Armas <span>({counter(allProducts)})</span></button>
+            <button  onClick={()=>linkToFullProducts()}>Armas <span>({counter(allProducts)})</span></button>
             <button onClick={()=>linkToFullPistols()}>Pistolas <span>({counter(guns)})</span></button>
             <button onClick={()=>linkToFullRevolvers()}>Revolvers <span>({counter(revolvers)})</span></button>
             <button onClick={()=>linkToFullKnife()}>Facas <span>({counter(facas)})</span></button>

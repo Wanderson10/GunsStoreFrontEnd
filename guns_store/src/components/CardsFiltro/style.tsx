@@ -18,8 +18,8 @@ h2{
     font-weight:900px;
 }
 img{
-    width: 90px;
-    height:80px;
+    width: 40%;
+    height:40%;
     border-radius:20px;
 }
 :hover{

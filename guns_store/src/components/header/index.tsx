@@ -31,7 +31,7 @@ function ComponentHeader( ){
   
     return (
         <>
-     
+       
         <Header>
            <figure>
             <img onClick={()=>linkToMain()} src={logo} alt="logoArmaDeFogo"/>
@@ -39,19 +39,7 @@ function ComponentHeader( ){
            <form>
            <input value={input} type="text" onChange={(event)=>setInput(event.target.value)}>
            </input>
-           
-            <button className="button-source">Pesquisar</button>
-          
-           </form>
-          
- 
-            <div>
-           <button onClick={()=>linkTologin()}>Login</button>
-           <button onClick={()=>linkCarrinho()}><BiCart className="ButtonCarrinho"></BiCart></button>
-           </div>
-          
-        </Header>
-        {input === "" ? (
+           {input === "" ? (
             null 
         ) : (
             <DivModal>
@@ -63,6 +51,20 @@ function ComponentHeader( ){
                 </ul>
             </DivModal>
         )}
+           
+            <button className="button-source">Pesquisar</button>
+          
+           </form>
+
+          
+ 
+            <div>
+           <button onClick={()=>linkTologin()}>Login</button>
+           <button onClick={()=>linkCarrinho()}><BiCart className="ButtonCarrinho"></BiCart></button>
+           </div>
+          
+        </Header>
+       
        
     
          </>
