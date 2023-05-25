@@ -2,13 +2,14 @@ import { Div } from "./style"
 import { useSimulationContext } from "../../context/contexct"
 
 function ComponentTop( ){
-  const {userName} = useSimulationContext()
+  const {userName,logout} = useSimulationContext()
     return (
         
         <Div>
-          {userName?.length !== 0? (
-
-            <p>Ola! {userName}!</p>
+          {userName? (
+            <div className="DivLogin">
+            <p>Ola! {userName}!</p> <button className="Sair" onClick={()=>logout()}>deslogar</button>
+            </div>
 
           ):(
 

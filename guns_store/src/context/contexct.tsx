@@ -98,6 +98,7 @@ export const ProviderPages = ({ children }: listProviderProps) => {
 
 
     const storage = localStorage.getItem('@Carrinho')
+    const storage2 = localStorage.getItem('@userName')
     const [model,setModel] = useState(false)
     const [img,setImg] = useState(false)
     const [input ,setInput] = useState<string>("")
@@ -111,15 +112,13 @@ export const ProviderPages = ({ children }: listProviderProps) => {
     const[facas,setFacas] = useState([])
     const[revolvers,setRevolvers] = useState([])
     const [online, setOnline] = useState(false)
-    const [userName ,setUsername] = useState(JSON.parse(localStorage.getItem("@userName")!)|| "")
+    const [userName ,setUsername] = useState(storage2? JSON.parse(storage2) : "")
     const [count,setCount] = useState(0)
     const[pegaImg,setPegaImg] = useState()
     const [carrinho,setCarrinho] = useState(storage? JSON.parse(storage) : [])
    
 
-    useEffect(()=>{
-      setUsername(JSON.parse(localStorage.getItem('@userName')!))
-    },[userName])
+  
     
     
     useEffect(() => {
@@ -243,12 +242,13 @@ export const ProviderPages = ({ children }: listProviderProps) => {
         api.post("users/login/",data)
         .then((response) => {
           
-          setUsername(data.username)
+          
           localStorage.setItem('@userName', JSON.stringify( data.username))
 
          
        
           localStorage.setItem("UserToken", response.data.access)
+          setUsername(JSON.parse(localStorage.getItem('@userName')!))
           toast.success("Login feito Com Sucesso!");
           
 
@@ -264,6 +264,7 @@ export const ProviderPages = ({ children }: listProviderProps) => {
       function logout() {
         localStorage.removeItem("@userName");
         localStorage.removeItem("@UserToken");
+        setUsername('')
         toast.info("Logout realizado", { autoClose: 3000 });
      
       }

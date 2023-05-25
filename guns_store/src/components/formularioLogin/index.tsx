@@ -4,26 +4,23 @@ import { useForm} from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useSimulationContext } from "../../context/contexct";
 import { IDataLogin } from "../../context/contexct";
-import { useEffect } from "react";
+
 
 
 
 function FormularioLogin(){
 
 
-  useEffect(()=>{
-    function getDados() {
-      const users = localStorage.getItem('userName')
-      
-     setUsername(users)
-     return console.log(userName)
+
+  
+    const{onSubmit,logout}= useSimulationContext()
+
+    
        
   
-     }
-   getDados()
-  },[])
+     
+   
   
-    const{onSubmit,userName,setUsername}= useSimulationContext()
     const shemma = yup.object().shape({
         username: yup.string().required("Nome obrigatorio"),
         password: yup
@@ -37,7 +34,7 @@ function FormularioLogin(){
       } = useForm<IDataLogin>({ resolver: yupResolver(shemma) });
     return(
         <Form onSubmit={handleSubmit(onSubmit)}>
-           <h2>Ja sou cadastrado</h2>
+        <h2>Ja sou cadastrado</h2> 
             <div className="div1">
             
             <label htmlFor="Nome">Nome</label>

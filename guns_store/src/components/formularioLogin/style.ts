@@ -11,6 +11,7 @@ background-color:white;
 gap:20px;
 height:300px;
 box-sizing:border-box;
+
 h2{
     font-weight:600;
     box-sizing:border-box;
@@ -69,4 +70,6 @@ button{
   
 
 }
+
+
 `
