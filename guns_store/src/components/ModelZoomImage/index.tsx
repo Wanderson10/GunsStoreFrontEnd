@@ -7,8 +7,8 @@ function Zomm (){
 
   
     return (
-        <DivImg  translate="no" onClick={()=>setImg(false)}>
-            <img translate="no" src={pegaImg} alt="foto arma"/>
+        <DivImg  onClick={()=>setImg(false)}>
+            <img  src={pegaImg} alt="foto arma"/>
         </DivImg>
         )
 }

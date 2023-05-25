@@ -8,9 +8,11 @@ import "react-toastify/dist/ReactToastify.min.css";
 function App() {
   return (
     <>
+    <html translate="no">
     <GlobalStyle></GlobalStyle>
     <ContainerRoutes/>
     <ToastContainer></ToastContainer>
+    </html>
     </>
   );
 }
