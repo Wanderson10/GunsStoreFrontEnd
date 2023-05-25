@@ -46,19 +46,19 @@ function FormularioCadastro(){
 
             <div>
             <label htmlFor="password">Senha </label>
-            <input {... register('password')}></input>
+            <input type="password" {... register('password')}></input>
             <p>{errors.password && errors.password.message}</p>
             </div>
 
             <div>
             <label htmlFor="confirmPassword">Confirmar Senha</label>
-            <input {... register('confirmPassword')}></input>
+            <input type="password" {... register('confirmPassword')}></input>
             <p>{errors.confirmPassword && errors.confirmPassword.message}</p>
             </div>
 
             <div>
             <label htmlFor="phone_number">Telefone </label>
-            <input {... register('phone_number')}></input>
+            <input  {... register('phone_number')}></input>
             <p>{errors.phone_number && errors.phone_number.message}</p>
             </div>
 

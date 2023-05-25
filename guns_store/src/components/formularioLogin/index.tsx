@@ -45,7 +45,7 @@ function FormularioLogin(){
 
             <div className="div2">
             <label htmlFor="Senha">Senha</label>
-            <input {... register('password')}></input>
+            <input type="password" {... register('password')}></input>
             <p>{errors.password && errors.password.message}</p>
             
             </div>
