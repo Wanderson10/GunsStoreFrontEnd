@@ -68,6 +68,8 @@ button{
 p{
     inline-size:300px;
 }
-
+.P1{
+ padding-left:80PX;
+}
 
 `

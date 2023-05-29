@@ -150,7 +150,9 @@ justify-content:center;
 align-items:center;
 margin-top:76px;
 
-
+h5{
+    color:white;
+}
    
    
    

@@ -3,7 +3,7 @@ import { createContext, useState, useEffect, ReactNode, useContext } from "react
 import { toast } from "react-toastify";
 import api from "../services/api";
 import React from 'react';
-import { AsyncLocalStorage } from "async_hooks";
+
 
 
 
@@ -24,6 +24,7 @@ export interface IweaponsResponse{
 		image3:string|undefined,
 		group: string,
     quantidade: number|null,
+    oldPrice:number|null,
 		atributes: {
 			id: number,
 		    caliber: string|null,
@@ -86,7 +87,9 @@ img: boolean,
 setImg : (value: React.SetStateAction<boolean> ) => void,
 pegaImg:string | undefined,
 setPegaImg : any,
-logout: ()=> void
+logout: ()=> void,
+
+
 
 
 
@@ -99,6 +102,7 @@ export const ProviderPages = ({ children }: listProviderProps) => {
 
     const storage = localStorage.getItem('@Carrinho')
     const storage2 = localStorage.getItem('@userName')
+    const commentStorage = localStorage.getItem('@userName')
     const [model,setModel] = useState(false)
     const [img,setImg] = useState(false)
     const [input ,setInput] = useState<string>("")
@@ -116,6 +120,7 @@ export const ProviderPages = ({ children }: listProviderProps) => {
     const [count,setCount] = useState(0)
     const[pegaImg,setPegaImg] = useState()
     const [carrinho,setCarrinho] = useState(storage? JSON.parse(storage) : [])
+    const [comments,setComments] = useState(commentStorage? JSON.parse(commentStorage) : [])
    
 
   
@@ -304,7 +309,8 @@ export const ProviderPages = ({ children }: listProviderProps) => {
            setImg,
            pegaImg,
            setPegaImg,
-           logout
+           logout,
+        
           
         
 

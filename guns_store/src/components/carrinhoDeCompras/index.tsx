@@ -5,7 +5,7 @@ import { Ul,Div,DivPrice } from "./style"
 
 
 function Carrinho(){
-    const {carrinho,setCarrinho}= useSimulationContext()
+    const {carrinho,setCarrinho,item}= useSimulationContext()
     
  
 function ValorTotal (){
@@ -18,19 +18,20 @@ function ValorTotal (){
       
  
  function deletarCarrinho(produ :IweaponsResponse) {
+ 
 
    if ( produ.quantidade! > 1  ){ 
      for(let i = 0; i < carrinho.length ; i++)
        if(carrinho[i].id === produ.id){
         carrinho[i].quantidade! -= 1
-        carrinho[i].price -= produ.price
-        setCarrinho(carrinho)
-         return localStorage.setItem('@Carrinho',JSON.stringify(carrinho))
+        carrinho[i].price -= item?.price!
+        
+         localStorage.setItem('@Carrinho',JSON.stringify(carrinho))
+         return setCarrinho(JSON.parse(localStorage.getItem('@Carrinho')!))
        }
        
 
    }
-
    else{
     const novoCarrinho = carrinho.filter((item) => item.id !== produ.id);
     setCarrinho(novoCarrinho);

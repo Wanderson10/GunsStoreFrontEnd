@@ -20,7 +20,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	font: "abel";
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -48,5 +48,8 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+@font-face {
+  font-family: "abel";
+  src: url(src\pages\pageProdutoClicado\fontes\OpenSans-Italic-VariableFont_wdth,wght.ttf);
+}
 `

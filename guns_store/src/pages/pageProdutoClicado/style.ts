@@ -12,10 +12,7 @@ export const DivTitle= styled.div`
     display:flex;
     align-items:center;
 
-    @font-face {
-  font-family: "abel";
-  src: url(src\pages\pageProdutoClicado\fontes\OpenSans-VariableFont_wdth,wght.ttf);
-}
+   
     h2{ 
         padding-left:30px;
         font-weight:700;
