@@ -24,6 +24,7 @@ function CardsFiltrados (){
 
  
     const ProdutosFiltrados = filtro.map((produto)=>
+    
         <Div onClick={()=>linkToProduct(produto)}>
             <h2>{produto.name}</h2>
             <img src={produto.image} alt="arma"/>

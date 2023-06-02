@@ -10,9 +10,10 @@ export const Div = styled.div`
     width: 300px;
     height: 300px;
     transition: 0.5s all;
+    cursor: pointer;
 
     :hover {
-      border: 2px solid yellow;
+      border: 3px solid #00C9C8;
     }
     @media (max-width: 600px) {
       width: 180px;
@@ -20,6 +21,7 @@ export const Div = styled.div`
     }
   }
   .img2 {
+    margin-right:10px;
     width: 150px;
     height: 150px;
     border: 1px solid gray;
@@ -27,7 +29,7 @@ export const Div = styled.div`
     transition: all 0.5s;
     cursor: pointer;
     :hover {
-      border: 2px solid yellow;
+      border:  3px solid #00C9C8;;
     }
 
     @media (max-width: 600px) {
@@ -90,7 +92,7 @@ export const Div = styled.div`
     button {
       width: 100px;
       height: 50px;
-      background-color: yellow;
+      background-color: #bffcf9;
       border-radius: 10px;
       cursor: pointer;
       transition:all 0.5s;
@@ -112,6 +114,7 @@ export const Div = styled.div`
     border-bottom: 2px solid gray;
     width: 90%;
     padding-bottom: 25px;
+    margin-bottom:25px;
 
     @media (max-width: 600px) {
         inline-size:200px;

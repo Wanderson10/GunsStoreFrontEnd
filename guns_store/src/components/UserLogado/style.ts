@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const Div = styled.div`
-background-color:#363636;
+
+
+background-color:#2A272A;
 width:100%;
 height:30px;
 color:white;
@@ -21,7 +23,7 @@ box-sizing:border-box;
     button{
         border:none;
         border-radius:10px;
-        background-color:yellow;
+        background-color: #F9F871;
         cursor:pointer;
         transition:all 0.5s;
         :hover{

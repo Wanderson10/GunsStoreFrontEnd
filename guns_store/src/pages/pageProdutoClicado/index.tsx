@@ -5,6 +5,7 @@ import ComponentMenu from "../../components/menu";
 import ComponentTop from "../../components/UserLogado";
 import { useSimulationContext } from "../../context/contexct";
 import { useEffect } from "react";
+import Comments from "../../components/abaComentarios";
 
 
 function PageProdutoClicado(){
@@ -51,6 +52,7 @@ return (
    
     
     </Main>
+    <Comments></Comments>
     </Body>
    
 )

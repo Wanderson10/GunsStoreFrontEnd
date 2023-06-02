@@ -4,4 +4,5 @@ width:100%;
 `
 export const Main = styled.main`
 background-color:#F0F0F0;
+box-sizing:border-box;
 `

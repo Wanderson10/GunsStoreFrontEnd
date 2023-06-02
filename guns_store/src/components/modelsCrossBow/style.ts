@@ -36,7 +36,7 @@ p{
 }
 
 :hover{
-    border:2px solid yellow;
-    text-decoration:underline black;
+    border: 3px solid #00C9C8;
+    text-decoration:underline #00C9C8;
 }
 `
