@@ -47,7 +47,7 @@ export const Header = styled.header`
     background-color: #424242;
     transition: all 0.1s;
     :hover {
-      border: 3px solid #bffcf9;
+      border: 2px solid #00C6CF;
     }
 
     @media (min-width: 620px) {
@@ -85,10 +85,11 @@ export const Header = styled.header`
     width: 50px;
     border-radius: 100%;
     transition: all 0.8s;
-    background-color: #bffcf9;
+    background-color:#00C6CF;
     display: flex;
     align-items: center;
     justify-content: center;
+    border:none;
 
     :hover {
       scale: 1.2;
@@ -102,14 +103,14 @@ export const Header = styled.header`
   }
 
   .button-source {
-    background-color: #F9F871;
+    background-color: #65FBD2;
     height: 50px;
     width: 100px;
     border-radius: 100px;
     transition: all 0.8s;
 
     :hover {
-      background-color: #bffcf9;
+      background-color: #00C6CF;
       scale: 1;
     }
   }

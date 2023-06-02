@@ -4,12 +4,12 @@ import { Menu } from "./style"
 import { useNavigate } from "react-router-dom";
 
 function ComponentMenu(){
-    const {allProducts,guns,revolvers,crossbows,setItens,facas,arcos} = useSimulationContext()
+    const {allProducts,guns,revolvers,crossbows,setItens,facas,arcos,setImg} = useSimulationContext()
     const navigate = useNavigate();
     function linkToFullProducts (){
       
         
-       
+        setImg(false)
       
           return  navigate(`/landingpage`, { replace: true });
       }
@@ -17,7 +17,8 @@ function ComponentMenu(){
       function linkToFullPistols (){
       
       
-       
+        setImg(false)
+
       
           return  navigate(`/FullItensPistols`, { replace: true });
       }
@@ -25,13 +26,13 @@ function ComponentMenu(){
       function linkToFullRevolvers (){
       
     
-       
+        setImg(false)
       
           return  navigate(`/FullItensRevolvers`, { replace: true });
       }
       function linkToFullBow (){
       
-     
+        setImg(false)
        
       
           return  navigate(`/FullItensBowls`, { replace: true });
@@ -45,7 +46,7 @@ function ComponentMenu(){
 
       function linkToFullKnife(){
       
-     
+        setImg(false)
       
           return  navigate(`/FullItensKnifes`, { replace: true });
       }

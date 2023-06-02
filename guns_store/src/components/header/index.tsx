@@ -11,17 +11,20 @@ import { BiCart} from "react-icons/bi";
 
 function ComponentHeader( ){
     const navigate = useNavigate();
-    const {setInput,input,setItem} = useSimulationContext()
+    const {setInput,input,setItem,setImg} = useSimulationContext()
     function linkTologin (){
+        setImg(false)
         return  navigate(`/login`, { replace: true });
     }
 
     function linkToMain (){
         setItem([])
+        setImg(false)
         return  navigate(`/landingpage`, { replace: true });
     }
 
     function linkCarrinho (){
+        setImg(false)
         return  navigate(`/Carrinho`, { replace: true });
     }
 

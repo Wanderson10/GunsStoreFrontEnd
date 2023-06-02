@@ -23,7 +23,7 @@ box-sizing:border-box;
     button{
         border:none;
         border-radius:10px;
-        background-color: #F9F871;
+        background-color:#65FBD2;
         cursor:pointer;
         transition:all 0.5s;
         :hover{
